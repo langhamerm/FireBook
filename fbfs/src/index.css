@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url('/img/chi1.jpg') no-repeat;
+    background: cyan !important;
     background-size: 100%;
     background-position: top;
     background-color: black;
