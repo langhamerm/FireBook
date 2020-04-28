@@ -1,18 +1,16 @@
-const initState = {
-  projects: [
-    { id: 1, title: "cook for me", content: "la la la la la" },
-    { id: 2, title: "sleep with me", content: "qwertty" },
-    { id: 2, title: "laugh out loud", content: "lol dood" },
-  ],
-};
+const initState = {}
 
 const projectReducer = (state = initState, action) => {
   switch (action.type) {
-    case "CREATE_PROJECT":
-      console.log("created project", action.project);
+    case 'CREATE_PROJECT_SUCCESS':
+      console.log('create project success');
+      return state;
+    case 'CREATE_PROJECT_ERROR':
+      console.log('create project error');
+      return state;
+    default:
+      return state;
   }
-
-  return state;
 };
 
 export default projectReducer;
