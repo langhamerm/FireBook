@@ -6,6 +6,7 @@ class SignIn extends Component {
     email: "",
     password: "",
   };
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
@@ -14,6 +15,7 @@ class SignIn extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.signIn(this.state);
+   
   };
   render() {
     const {authError} = this.props;
@@ -30,7 +32,7 @@ class SignIn extends Component {
             <input type="password" id="password" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn pink lighten-1 z-depth-0" onClick={this.clearInput}>Login</button>
             <div className="red-rext center">
               {authError ? <p>{authError}</p> : null}
             </div>
