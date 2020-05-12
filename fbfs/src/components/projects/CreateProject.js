@@ -7,6 +7,7 @@ class CreateProject extends Component {
   state = {
     title: "",
     content: "",
+    url: "",
   };
   handleChange = (e) => {
     this.setState({
@@ -38,6 +39,15 @@ class CreateProject extends Component {
               onChange={this.handleChange}
             ></textarea>
             <label htmlFor="content">Project Content</label>
+          </div>
+          <div className="input-field">
+          <textarea
+              id="url"
+              className="materialize-textarea"
+              onChange={this.handleChange}
+            ></textarea>
+            <label htmlFor="url">Project Links</label>
+
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1">Create</button>
